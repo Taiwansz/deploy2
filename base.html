@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Portfólio - Matheus Sousa{% endblock %}</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    {% include 'navbar.html' %}
+    {% block content %}{% endblock %}
+    <footer class="bg-dark text-center text-light py-4">
+        <div class="container">
+            <p>&copy; 2024 Matheus Sousa dos Santos. Todos os direitos reservados.</p>
+            <div>
+                <a href="https://www.instagram.com/taiwan.sz/" target="_blank" class="text-light mx-2">Instagram</a>
+                <a href="https://github.com/Taiwansz" target="_blank" class="text-light mx-2">GitHub</a>
+                <a href="https://www.linkedin.com/in/mth3us" target="_blank" class="text-light mx-2">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></script>
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,146 @@
+body {
+    background-color: #222;
+    color: #fff;
+    font-family: 'Oswald', sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+.navbar-brand img {
+    width: 50px;
+}
+
+.navbar-nav .nav-link {
+    color: #fff;
+    font-weight: 600;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #00FF00;
+}
+
+.gta-banner {
+    background: url("{{ url_for('static', filename='images/img.png') }}") no-repeat center center/cover;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+}
+
+.gta-banner h1 {
+    font-size: 4rem;
+    color: #00FF00;
+}
+
+.gta-banner p {
+    font-size: 1.5rem;
+}
+
+.about-gta {
+    background-color: #333;
+    color: #fff;
+}
+
+.projetos-gta {
+    background-color: #1a1a1a;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 20px 0;
+}
+
+.gta-card {
+    border: none;
+    transition: transform 0.3s;
+    text-align: center;
+    margin: 15px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #333;
+    width: 30%;
+}
+
+.gta-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px 10px 0 0;
+}
+
+.gta-card:hover {
+    transform: scale(1.05);
+}
+
+.btn-neon {
+    background-color: transparent;
+    border: 2px solid #00FF00;
+    color: #00FF00;
+    transition: all 0.3s;
+}
+
+.btn-neon:hover {
+    background-color: #00FF00;
+    color: #000;
+}
+
+.skills-gta {
+    background-color: #222;
+    color: #fff;
+}
+
+.skills-gta .progress {
+    background-color: #444;
+}
+
+.skills-gta .progress-bar {
+    background-color: #00FF00;
+}
+
+.testimonials-gta {
+    background-color: #444;
+    color: #fff;
+}
+
+.testimonial {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.contact-gta {
+    background-color: #222;
+    color: #fff;
+}
+
+.contact-gta .form-label {
+    color: #fff;
+}
+
+.blog-gta {
+    background-color: #222;
+    color: #fff;
+}
+
+.blog-gta h3 {
+    color: #00FF00;
+}
+
+.container {
+    padding: 20px;
+}
+
+.gta-banner {
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+ul, ol {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
