@@ -3,7 +3,7 @@ from flask import Flask, render_template, request, redirect, url_for, flash
 app = Flask(__name__)
 app.secret_key = 'sua_chave_secreta'
 
-@app.route('/home')
+@app.route('/')
 def home():
     projects = [
         {'title': 'Projeto 1', 'description': 'Portfolio feito com HTML, CSS, FLASK', 'image': 'PORTCAPA.png'},
