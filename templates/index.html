@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+
+{% block title %}Início - Matheus Sousa{% endblock %}
+
+{% block content %}
+<header class="gta-banner d-flex align-items-center justify-content-center text-center text-light">
+    <div>
+        <h1 class="display-4">Matheus Sousa dos Santos</h1>
+    </div>
+</header>
+
+<section id="skills" class="skills-gta py-5 bg-dark text-light">
+    <div class="container">
+        <h2 class="text-center mb-5">Habilidades</h2>
+        <div class="row">
+            <div class="col-md-4 text-center">
+                <h3>HTML</h3>
+                <div class="progress">
+                    <div class="progress-bar" style="width: 40%">40%</div>
+                </div>
+            </div>
+            <div class="col-md-4 text-center">
+                <h3>CSS</h3>
+                <div class="progress">
+                    <div class="progress-bar" style="width: 25%">25%</div>
+                </div>
+            </div>
+            <div class="col-md-4 text-center">
+                <h3>JavaScript</h3>
+                <div class="progress">
+                    <div class="progress-bar" style="width: 5%">5%</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="testimonials" class="testimonials-gta py-5">
+    <div class="container">
+        <h2 class="text-center mb-5">Testemunhos</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="testimonial">
+                    <p>"Matheus é um desenvolvedor excepcional, sempre pronto para ajudar e encontrar soluções criativas."</p>
+                    <h5>- João Silva</h5>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="testimonial">
+                    <p>"Trabalhar com Matheus foi uma experiência incrível! Seu conhecimento técnico é impressionante."</p>
+                    <h5>- Maria Oliveira</h5>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="testimonial">
+                    <p>"Um talento em ascensão! Matheus tem um futuro brilhante pela frente."</p>
+                    <h5>- Pedro Santos</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<<section id="projetos" class="projetos-gta py-5 bg-dark text-light">
+    <div class="container">
+        <h2 class="text-center mb-5">Projetos Recentes</h2>
+        <div class="row">
+            {% for project in projects %}
+            <div class="col-md-4 mb-4">
+                <div class="card bg-light text-dark gta-card">
+                    <img src="{{ url_for('static', filename='images/' + project.image) }}" class="card-img-top" alt="{{ project.title }}">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ project.title }}</h5>
+                        <p class="card-text">{{ project.description }}</p>
+                        <a href="#" class="btn btn-neon">Saiba Mais</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endblock %}
